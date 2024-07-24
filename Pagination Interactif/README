@@ -1,0 +1,36 @@
+## Pagination Interactive...
+
+## Fonctionnement
+
+*Boutons de Navigation* :
+
+Le bouton gauche (prevButton) décrémente le numéro de page lorsque cliqué, jusqu'à un minimum de 1.
+Le bouton droit (nextButton) incrémente le numéro de page lorsque cliqué, jusqu'à un maximum de 15.
+
+La fonction updatePageNumber met à jour le texte affichant le numéro de page actuel et le total des pages.
+
+N'hesiter pas l'utiliser dans vos project c'est cadeau...
+
+instagram : https://www.instagram.com/anelka.md  ( Si tu veux savoir qui je suis !)
+
+Twitter : https://x.com/Anelka_MD 
+
+Facebook :
+
+====================================== Anglais ============================
+Navigation Buttons:
+
+The left button (prevButton) decrements the page number when clicked, down to a minimum of 1.
+The right button (nextButton) increments the page number when clicked, up to a maximum of 15.
+
+The function updatePageNumber updates the text displaying the current page number and the total number of pages.
+
+Feel free to use it in your projects, it's a gift...
+
+Instagram: https://www.instagram.com/anelka.md (If you want to know who I am!)
+
+Twitter: https://x.com/Anelka_MD
+
+Facebook : 
+
+## Coding by Anelka MD
