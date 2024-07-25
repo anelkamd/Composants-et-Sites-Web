@@ -40,3 +40,8 @@ body {
     margin-left: 68px;
     border-radius: 100px 100px 10px 10px ;
 }
+.ombre {
+    height: 5px;
+    width: 15px;
+    background-color: rgba(0, 0, 0, 0.315);
+}
