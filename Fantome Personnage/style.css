@@ -32,4 +32,8 @@ body {
     margin: 5px;
     border-radius: 5px 5px 100px 100px;
 }
-
+.personage .nez {
+    height: 20px;
+    width: 20px;
+    background-color: black;
+}
