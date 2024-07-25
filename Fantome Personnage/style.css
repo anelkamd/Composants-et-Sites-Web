@@ -41,14 +41,14 @@ body {
     transform: translateX(-50%);
 }
 
-.ghost .eyes .eye {
+.personage .yeux .yeux1, .yeux2 {
     width: 20px;
     height: 20px;
     background: #000000;
-    border-radius: 50%;
+    border-radius: 0 0 100px 100px;
 }
 
-.ghost .mouth {
+.personage .nez {
     position: absolute;
     top: 80px;
     left: 50%;
