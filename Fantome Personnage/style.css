@@ -19,7 +19,12 @@ body {
 .personage .yeux {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
-.personage .yeux .yeux1 {
+.personage .yeux .yeux1, .yeux2 {
     background-color: black;
+    height: 20px;
+    width: 30px;
+    position: inherit;
 }
