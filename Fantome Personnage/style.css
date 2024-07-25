@@ -28,5 +28,6 @@ body {
     width: 60px;
     position: inherit;
     margin: 5px;
+    border-radius: 5px 5px 100px 100px;
 }
 
