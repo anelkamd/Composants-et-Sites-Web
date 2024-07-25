@@ -15,12 +15,14 @@ body {
     width: 170px;
     height: 220px;
     border-radius: 100px 100px 0 0 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .personage .yeux {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 80px;
 }
 .personage .yeux .yeux1, .yeux2 {
     background-color: black;
