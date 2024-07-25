@@ -20,11 +20,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding-top: 80px;
 }
 .personage .yeux .yeux1, .yeux2 {
     background-color: black;
     height: 20px;
     width: 30px;
     position: inherit;
+    margin: 5px;
 }
