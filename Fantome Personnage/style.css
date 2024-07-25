@@ -16,3 +16,10 @@ body {
     height: 220px;
     border-radius: 100px 100px 0 0 ;
 }
+.personage .yeux {
+    display: flex;
+    align-items: center;
+}
+.personage .yeux .yeux1 {
+    background-color: black;
+}
