@@ -11,46 +11,44 @@ body {
     background-color: #ff4b4b;
     margin: 0;
 }
-
 .personage {
     position: relative;
     width: 100px;
     height: 140px;
     background: #ffffff;
-    border-radius: 50px 50px 20px 20px;
-    overflow: hidden;
+    border-radius: 50px 50px 0 0;
     animation: float 2s infinite ease-in-out;
 }
-
-.personage::after {
+.personage::before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100px;
     height: 20px;
-    background: #ff4b4b;
+    background: #ffffff;
+    border-radius: 50%;
 }
 
-.yeux {
+.personage .yeux {
     position: absolute;
     top: 40px;
     left: 50%;
-    width: 60px;
+    width: 50px;
     height: 20px;
     display: flex;
     justify-content: space-between;
     transform: translateX(-50%);
 }
 
-.yeux1, .yeux2 {
+.personage .yeux .yeux1, .yeux2 {
     width: 20px;
     height: 20px;
     background: #000000;
-    border-radius: 50%;
+    border-radius: 0 0 100px 100px;
 }
 
-.nez {
+.personage .nez {
     position: absolute;
     top: 80px;
     left: 50%;
@@ -61,26 +59,8 @@ body {
     transform: translateX(-50%);
 }
 
-.ombre {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 80px;
-    height: 10px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    transform: translateX(-50%);
-    animation: shadowFloat 2s infinite ease-in-out;
-}
-
 @keyframes float {
     0% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0); }
-}
-
-@keyframes shadowFloat {
-    0% { transform: translateY(0) scaleX(1); }
-    50% { transform: translateY(20px) scaleX(0.8); }
-    100% { transform: translateY(0) scaleX(1); }
 }
