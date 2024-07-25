@@ -24,8 +24,9 @@ body {
 }
 .personage .yeux .yeux1, .yeux2 {
     background-color: black;
-    height: 20px;
-    width: 30px;
+    height: 30px;
+    width: 60px;
     position: inherit;
     margin: 5px;
 }
+
