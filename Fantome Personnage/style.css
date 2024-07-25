@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 body {
-    background-color: rgb(142, 120, 120);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 200px;
+    height: 100vh;
+    background-color: #ff4b4b;
+    margin: 0;
 }
 .personage {
     background-color: aliceblue;
