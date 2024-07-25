@@ -4,14 +4,15 @@
     box-sizing: border-box;
 }
 body {
-    background-color: rgb(243, 84, 84);
+    background-color: rgb(142, 120, 120);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 220px;
+    padding-top: 200px;
 }
 .personage {
     background-color: aliceblue;
-    width: 100px;
-    height: 180px;
+    width: 200px;
+    height: 250px;
+    border-radius: 50% 50% 0 0 ;
 }
