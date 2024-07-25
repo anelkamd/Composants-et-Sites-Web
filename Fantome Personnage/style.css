@@ -11,6 +11,8 @@ body {
     height: 100vh;
     width: 100px;
 }
-.personage {
+.ppersonage {
     background-color: aliceblue;
+    width: 100px;
+    height: 80px;
 }
