@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+    background-color: antiquewhite;
+}
+
+.profil {
+    height: 100px;
+    margin: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profil details {
+    position: relative;
+}
+.profil details i {
+    font-size: 40px;
+}
+.profil details:hover {
+    cursor: pointer;
+    color: rgb(29, 28, 28);
+}
+.profil details ul {
+    position: absolute;
+    left: 90%;
+    list-style: none;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.profil details ul li {
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.profil details ul li:hover {
+    background-color: #f0f2fb;
+}
+.profil details summary {
+    list-style: none;
+}
