@@ -940,6 +940,44 @@
 
   </main>
 
+<?php require_once('./bd/conbd.php'); ?>
+<?php
+ob_start();
+session_start();
+?>
+<?php
+if(isset($_POST['connexion'])) {
+    $error='';    
+    if(empty($_POST['username']) || empty($_POST['password'])) {
+        $error = 'Nom d\'utilisateur et mot de passe requis';
+    } else {
+        $username = strip_tags($_POST['username']);
+        $password = strip_tags($_POST['password']);
+
+        $sql = $pdo->prepare("SELECT * FROM user WHERE username=?");
+        $sql->execute(array($username));
+        $total = $sql->rowCount();
+        $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        if($total == 0) {
+            $error = 'Valeurs de connexion incorrectes<br/>';
+        } else {
+            foreach($result as $data) {
+                $password_bd = $data['pwd'];
+            }
+
+            if($password_bd == md5($password)){
+                $_SESSION['user'] = $data;   
+                header("location: admin/index.php");
+            } else { 
+                $error = 'Mot de passe incorrect<br/>';
+            }
+        }
+    }
+}
+?>
+
+
 
 
 
