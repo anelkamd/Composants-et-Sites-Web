@@ -27,6 +27,7 @@ body {
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
 .dropdown-btn img {
@@ -51,7 +52,7 @@ body {
     padding: 20px;
     opacity: 0;
     visibility: hidden;
-    transition:  0.5s ease;
+    transition:  0.7s ease;
 }
 
 .dropdown-content.show {
