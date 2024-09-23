@@ -3,32 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dropdown Menu</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./Styles.css">
-    <title>Profils</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="profil">
-        <nav>
-            <details>
-                <summary>
-                    <i class='bx bxs-user-account'></i>
-                </summary>
-                <ul>
-                    <li>Profils</li>
-                    <li> Paramettre</li>
-                    <li> 
-                        <details>
-                            <summary>Connexion</summary>
-                            <ul>
-                                <li>Se connecter</li>
-                                <li>S'inscrire</li>
-                            </ul>
-                        </details>
-                    </li>
-                </ul>
-            </details>
-        </nav>
+    <div class="dropdown">
+        <button class="dropdown-btn">
+            <img src="https://i.pravatar.cc/40" alt="User Avatar">
+            <span class="dropdown-icon"><i class='bx bx-dots-horizontal-rounded'></i></span>
+        </button>
+        <div class="dropdown-content">
+            <div class="user-info">
+                <img src="https://i.pravatar.cc/40" alt="User Avatar">
+                <div class="user-details">
+                    <h4>Mr.McMickey</h4>
+                    <p>mcmickey</p>
+                </div>
+            </div>
+            <ul>
+                <li><i class='bx bx-cog'></i>Account Settings</li>
+                <li><i class='bx bx-grid-alt'></i>Dashboard</li>
+                <li><i class='bx bx-cart'></i>Purchases</li>
+                <li class="dark-mode-toggle">
+                    <i class='bx bx-moon'></i>Dark Mode
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider"></span>
+                    </label>
+                </li>
+                <li><i class='bx bx-help-circle'></i>Help Center</li>
+            </ul>
+            <button class="logout"><i class='bx bx-power-off'></i> Log out</button>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
