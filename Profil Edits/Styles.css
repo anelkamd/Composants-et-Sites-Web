@@ -48,8 +48,17 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 3s, visibility 3s;
 }
+
+.dropdown-content.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 
 .user-info {
     display: flex;
