@@ -12,3 +12,5 @@ inspirer par Tevfik sur Twitter (X) [https://x.com/tvfkctrz]
 # Youtube 
 
 Tutoriel : https://www.youtube.com/@Anelka_MD
+
+N'oublier pas de vous abonner
