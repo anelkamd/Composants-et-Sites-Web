@@ -185,7 +185,7 @@ $conn->close();
             <input type="time" id="heure_depart" name="heure_depart" class="block w-full p-1 border border-gray-300 rounded-md mb-3 text-sm">
             
             <label for="prix" class="block text-xs font-medium text-gray-500">Prix</label>
-            <input type="number" id="prix" name="prix" class="block w-full p-1 border border-gray-300 rounded-md mb-3 text-sm">
+            <input type="number" id="prix" name="prix" class="block w-full p-1 border border-gray-300 rounded-md mb-3 text-sm" placeholder="En franc Congolais">
             
             <!-- Section de paiement -->
             <h3 class="text-sm font-semibold mb-2">Moyen de paiement</h3>
