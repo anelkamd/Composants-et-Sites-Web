@@ -79,8 +79,9 @@ Un exemple du billet PDF généré :
 
 # Auteurs
 
-# Anelka MD - Développeur web et designer UI/UX.
-instagram : https://www.instagram.com/anelka.md
+Anelka MD - Développeur web et designer UI/UX.
+
+# instagram : https://www.instagram.com/anelka.md
 
 
 
