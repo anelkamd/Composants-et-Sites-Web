@@ -2,8 +2,6 @@
 
 <img width="959" alt="Cover_app" src="https://github.com/user-attachments/assets/8fb89db9-0f5d-4eb4-9e26-52b6a5d556fd">
 
-
- 
 Description
 Ce projet est un système de réservation en ligne permettant aux utilisateurs de réserver des billets pour un voyage, avec la génération automatique d'un billet PDF contenant les informations sur la réservation. Le billet PDF est personnalisé et inclut un filigrane pour authentification. L'application utilise PHP, MySQL et FPDF pour la gestion des données et la génération des billets.
 
@@ -19,7 +17,7 @@ Technologies utilisées
 
  # Front-End :
 
-HTML/CSS et TailwindCSS pour la création des interfaces utilisateurs.
+HTML/CSS/TailwindCSS et JavaScript pour la création des interfaces utilisateurs.
 
 # Back-End :
 
@@ -83,7 +81,7 @@ Un exemple du billet PDF généré :
 
 # Auteurs
 
-Anelka MD - Développeur web et designer UI/UX.
+# Anelka MD - Développeur web et designer UI/UX.
 instagram : https://www.instagram.com/anelka.md
 
 
