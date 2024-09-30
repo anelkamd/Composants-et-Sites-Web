@@ -36,7 +36,7 @@ Installation
 
 # Cloner le projet :
 
-git clone https://github.com/ton-projet/reservation-billets.git
+git clone Projet de Réservation de Billets en Ligne dans le Dossier : https://github.com/anelkamd/Composants-et-Sites-Web.git
 cd reservation-billets
 
 # Configurer la base de données :
