@@ -31,25 +31,32 @@ function initialize() {
   }
   
   function updateButtons() {
-    const tasks = document.querySelectorAll('div'); // Obtenir toutes les tâches
-  
-    tasks.forEach((task, index) => {
-      const upButton = task.querySelector('.upButton');
-      const downButton = task.querySelector('.downButton');
-  
-      if (index === 0) {
-        // Première position : seulement le bouton "Descendre"
-        if (upButton) upButton.style.display = 'none';
-        if (downButton) downButton.style.display = 'block';
-      } else if (index === tasks.length - 1) {
-        // Dernière position : seulement le bouton "Monter"
-        if (upButton) upButton.style.display = 'block';
-        if (downButton) downButton.style.display = 'none';
-      } else {
-        // Position intermédiaire : les deux boutons
-        if (upButton) upButton.style.display = 'block';
-        if (downButton) downButton.style.display = 'block';
+    const divs = document.querySelectorAll('div');
+    
+    divs.forEach((div, index) => {
+      // Supprimer les anciens boutons avant de les réinitialiser
+      div.querySelectorAll('button').forEach(btn => btn.remove());
+
+      // Si la div n'est pas la première, ajouter un bouton "Monter"
+      if (index > 0) {
+        const upButton = document.createElement('button');
+        upButton.classList.add('upButton');
+        upButton.type = 'button';
+        upButton.innerHTML = '↑';
+        upButton.addEventListener('click', () => moveUp(div));
+        div.appendChild(upButton);
       }
+
+      // Si la div n'est pas la dernière, ajouter un bouton "Descendre"
+      if (index < divs.length - 1) {
+        const downButton = document.createElement('button');
+        downButton.classList.add('downButton');
+        downButton.type = 'button';
+        downButton.innerHTML = '↓';
+        downButton.addEventListener('click', () => moveDown(div));
+        div.appendChild(downButton);
+      }
+
     });
   }
   
