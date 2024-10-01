@@ -38,11 +38,11 @@ function initialize() {
       const downButton = task.querySelector('.downButton');
   
       if (index === 0) {
-        // Première position : seulement le bouton "Monter"
+        // Première position : seulement le bouton "Descendre"
         if (upButton) upButton.style.display = 'none';
         if (downButton) downButton.style.display = 'block';
       } else if (index === tasks.length - 1) {
-        // Dernière position : seulement le bouton "Descendre"
+        // Dernière position : seulement le bouton "Monter"
         if (upButton) upButton.style.display = 'block';
         if (downButton) downButton.style.display = 'none';
       } else {
