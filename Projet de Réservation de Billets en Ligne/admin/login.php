@@ -9,7 +9,7 @@ if (isset($_POST['connexion'])) {
         $error = 'Adresse email et mot de passe requis';
     } else {
         $email = strip_tags($_POST['email']);
-        $password = strip_tags($_POST['password']); // Mot de passe en clair
+        $password = strip_tags($_POST['password']); // Mot de passe en clair saisi par l'utilisateur
 
         try {
             // Préparation de la requête pour récupérer l'utilisateur par email
@@ -22,11 +22,11 @@ if (isset($_POST['connexion'])) {
                 $error = 'Valeurs de connexion incorrectes<br/>';
             } else {
                 foreach ($result as $data) {
-                    $password_bd = $data['pwd']; // Mot de passe stocké en clair dans la base de données
+                    $password_bd = $data['pwd']; // Mot de passe haché stocké dans la base de données
                 }
 
-                // Comparaison des mots de passe en clair
-                if ($password == $password_bd) {
+                // Comparaison du mot de passe haché
+                if (md5($password) == $password_bd) {  // Hachage du mot de passe entré pour le comparer avec celui de la base
                     // Connexion réussie, on stocke l'utilisateur dans la session
                     $_SESSION['user'] = $data;
 
@@ -43,7 +43,6 @@ if (isset($_POST['connexion'])) {
     }
 }
 ?>
-
 
 <head>
   <meta charset="UTF-8">
