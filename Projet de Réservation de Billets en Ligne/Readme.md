@@ -42,20 +42,6 @@ git clone Projet de Réservation de Billets en Ligne dans le Dossier : https://g
 Créer une base de données MySQL.
 Importer le fichier reservationbillet.sql fourni dans le répertoire BD du projet pour créer les tables nécessaires.
 
- # Structure des fichiers
-
- /Projet Tutore LIC3/
-│
-├── /librarie/              # Bibliothèque FPDF
-│   └── fpdf.php
-├── /Pages Secondaire/
-│   └── Reservationbillets.php # Script PHP de gestion des réservations et génération PDF
-├── /css/                   # Fichiers CSS pour styliser l'interface utilisateur
-├── /images/                # Dossier contenant les images utilisées dans les billets PDF
-├── config.php              # Configuration de la base de données
-├── index.php               # Page principale de l'application
-└── README.md               # Documentation du projet
-
  # Utilisation
 Accédez à la page de réservation via l'URL de l'application.
 
