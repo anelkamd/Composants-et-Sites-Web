@@ -3,54 +3,71 @@ function initialize() {
   
     buttons.forEach(button => {
       button.addEventListener('click', event => {
-        const div = button.closest('div');
+        const taskDiv = event.target.parentElement; // Obtenir la div de la tâche
+        const allTasks = Array.from(document.querySelectorAll('div')); // Obtenir toutes les tâches
   
-        if (button.classList.contains('upButton')) {
-          moveUp(div);
-        } else if (button.classList.contains('downButton')) {
-          moveDown(div);
+        if (event.target.classList.contains('upButton')) {
+          // Vérifier si la tâche peut monter
+          const previousTask = taskDiv.previousElementSibling;
+          if (previousTask) {
+            // Monter la tâche
+            taskDiv.parentElement.insertBefore(taskDiv, previousTask);
+          }
+        } else if (event.target.classList.contains('downButton')) {
+          // Vérifier si la tâche peut descendre
+          const nextTask = taskDiv.nextElementSibling;
+          if (nextTask) {
+            // Descendre la tâche
+            taskDiv.parentElement.insertBefore(nextTask, taskDiv);
+          }
         }
+  
+        // Mettre à jour les boutons après le changement de position
+        updateButtons();
       });
     });
   
-    function moveUp(div) {
-      const prevDiv = div.previousElementSibling;
-      if (prevDiv) {
-        div.parentNode.insertBefore(div, prevDiv);
-      }
-    }
-  
-    function moveDown(div) {
-      const nextDiv = div.nextElementSibling;
-      if (nextDiv) {
-        div.parentNode.insertBefore(nextDiv, div);
-      }
-    }
+    updateButtons(); // Initialiser les boutons
   }
   
-  // Simuler l'interface HTML du document
+  function updateButtons() {
+    const tasks = document.querySelectorAll('div'); // Obtenir toutes les tâches
+  
+    tasks.forEach((task, index) => {
+      const upButton = task.querySelector('.upButton');
+      const downButton = task.querySelector('.downButton');
+  
+      if (index === 0) {
+        // Première position : seulement le bouton "Monter"
+        if (upButton) upButton.style.display = 'none';
+        if (downButton) downButton.style.display = 'block';
+      } else if (index === tasks.length - 1) {
+        // Dernière position : seulement le bouton "Descendre"
+        if (upButton) upButton.style.display = 'block';
+        if (downButton) downButton.style.display = 'none';
+      } else {
+        // Position intermédiaire : les deux boutons
+        if (upButton) upButton.style.display = 'block';
+        if (downButton) downButton.style.display = 'block';
+      }
+    });
+  }
+  
+  // Ajout du contenu HTML comme précédemment
   document.body.innerHTML = `
   <div>
-      <span>Préparer la présentation</span>
-      <button class="downButton" type="button">↓</button>
+      <span>Prepare presentation</span>
+      <button class="downButton" type="button">&darr;</button>
   </div>
   <div>
-      <span>Lire les e-mails</span>
-      <button class="downButton" type="button">↓</button>
-      <button class="upButton" type="button">↑</button>
+      <span>Read emails</span>
+      <button class="downButton" type="button">&darr;</button>
+      <button class="upButton" type="button">&uarr;</button>
   </div>
   <div>
-      <span>Rapport mensuel</span>
-      <button class="upButton" type="button">↑</button>
+      <span>Monthly report</span>
+      <button class="upButton" type="button">&uarr;</button>
   </div>`;
   
-  // Initialiser les événements
-  initialize();
+  initialize(); // Initialiser la fonction
   
-  // Simuler des clics pour tester le déplacement des divs
-  document.querySelectorAll("button")[0].click(); // Descendre "Préparer la présentation"
-  document.querySelectorAll("button")[3].click(); // Monter "Rapport mensuel"
-  document.querySelectorAll("button")[1].click(); // Descendre "Lire les e-mails"
-  
-  // Afficher le nouvel ordre des divs dans la console
-  console.log(document.body.innerHTML);
