@@ -15,6 +15,7 @@ loader.load('./Anelka3D_Animer.glb', function (gltf) {
     const model = gltf.scene;
     scene.add(model);
     model.scale.set(0.5, 0.5, 0.5); // Ajuste l'échelle si nécessaire
+    model.position.set(0, 0, 0);  // Ajuste la position pour être sûr qu'il est dans le champ de la caméra
 
 
     // Animate the model
