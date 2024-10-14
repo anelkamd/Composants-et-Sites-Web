@@ -1,18 +1,22 @@
-</html>
 <!DOCTYPE html>
-<html>
-  <head>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-   <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-      <model-viewer 
-      src="3d_cude.glb"
-      alt="Une voiture noire en 3D"
-      
-      camera-controls="false"
-      autoplay
-      > 
-    </model-viewer>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Hero Header</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero-header">
+        <div class="content">
+            <h1 class="hero-title">Welcome to My Portfolio</h1>
+            <p class="hero-subtitle">Creative Developer & Designer</p>
+            <div id="model-container"></div> <!-- 3D model container -->
+        </div>
+    </header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@google/model-viewer@1.9.2/dist/model-viewer.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
