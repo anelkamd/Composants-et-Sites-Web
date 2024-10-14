@@ -16,7 +16,7 @@ scene.add(light);
 
 // Load the 3D model (replace with your own .glb model URL)
 const loader = new THREE.GLTFLoader();
-loader.load('./Anelka3D_Animer.glb', function (gltf) {
+loader.load('./Anelka3D.glb', function (gltf) {
     const model = gltf.scene;
     scene.add(model);
 
