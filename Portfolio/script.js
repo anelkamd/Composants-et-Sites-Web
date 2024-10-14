@@ -9,14 +9,23 @@ modelContainer.appendChild(renderer.domElement);
 
 camera.position.z = 5;  // Adjust as needed
 
-// Load the 3D model (replace with your own .glb model URL)
+// Add lighting to the scene
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
+
+const light = new THREE.DirectionalLight(0xffffff, 1);
+light.position.set(0, 10, 10);
+scene.add(light);
+
+// Load the 3D model
 const loader = new THREE.GLTFLoader();
 loader.load('./Anelka3D_Animer.glb', function (gltf) {
     const model = gltf.scene;
     scene.add(model);
-    model.scale.set(0.5, 0.5, 0.5); // Ajuste l'échelle si nécessaire
-    model.position.set(0, 0, 0);  // Ajuste la position pour être sûr qu'il est dans le champ de la caméra
 
+    // Adjust model's position and scale if needed
+    model.position.set(0, 0, 0);
+    model.scale.set(0.5, 0.5, 0.5);  // Adjust scale
 
     // Animate the model
     const animate = function () {
@@ -26,6 +35,7 @@ loader.load('./Anelka3D_Animer.glb', function (gltf) {
     };
     animate();
 }, undefined, function (error) {
+    alert("Erreur lors du chargement du modèle.");
     console.error(error);
 });
 
