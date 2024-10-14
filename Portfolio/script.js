@@ -14,6 +14,8 @@ const loader = new THREE.GLTFLoader();
 loader.load('./Anelka3D_Animer.glb', function (gltf) {
     const model = gltf.scene;
     scene.add(model);
+    model.scale.set(0.5, 0.5, 0.5); // Ajuste l'échelle si nécessaire
+
 
     // Animate the model
     const animate = function () {
