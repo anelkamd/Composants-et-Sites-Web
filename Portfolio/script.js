@@ -11,7 +11,7 @@ camera.position.z = 5;  // Adjust as needed
 
 // Load the 3D model (replace with your own .glb model URL)
 const loader = new THREE.GLTFLoader();
-loader.load('path/to/your/model.glb', function (gltf) {
+loader.load('./Anelka3D_Animer.glb', function (gltf) {
     const model = gltf.scene;
     scene.add(model);
 
